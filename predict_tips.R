@@ -38,7 +38,7 @@ data_tips_predictions <- data_tips %>%
   mutate(
     predicted_tip = round(predict(best_model, newdata = .), 2),
     prediction_error_abs = round(abs(predicted_tip - tip), 2),
-    prediction_error_rel = round(prediction_error / tip, 2)
+    prediction_error_rel = round(prediction_error_abs / tip, 2)
   )
 
 # Save prediction dataset

@@ -30,7 +30,7 @@ rmse_value <- sqrt(mse_value)
 residuals <- residuals(model_predict_tip)
 
 # Residuals visualization
-ggplot(data_tips, aes(x = residuals)) +
+plot_distribution_residuals <- ggplot(data_tips, aes(x = residuals)) +
   geom_histogram(binwidth = 0.1, fill = "skyblue", color = "black", alpha = 0.7) +
   labs(title = "Residuals Distribution", x = "Residuals", y = "Frequency") +
   theme_minimal()
